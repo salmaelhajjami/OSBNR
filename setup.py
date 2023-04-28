@@ -1,4 +1,6 @@
-from setuptools import setup
+from setuptools import setup, findpackages
+import os
+import codecs
 
 setup(
     name='osbnr',
