@@ -15,18 +15,22 @@ This approach has been applied to various domains, including fraud detection, an
 
 ## Usage
 
-To use OSBNR, import the OSBNR class from the osbnr module and create an instance of the class with the desired number of clusters (k). Then, call the fit_resample method of the OSBNR instance, passing in the feature matrix (X) and label vector (y) of the original dataset. The method will return the balanced feature matrix and label vector.
+To use OSBNR, you can simply import the OSBNR class from the PyOSBNR module and create an instance of the class with the desired number of clusters (k). Then, by calling the fit_resample method of the OSBNR instance, you can obtain the balanced feature matrix and label vector.
 
-`from osbnr import OSBNR`
+Here's an example code :
 
-`osbnr = OSBNR(k=5)  # Create an instance of the OSBNR class with k=5 clusters`
-`X_resampled, y_resampled = osbnr.fit_resample(X, y)  # Resample the dataset using OSBNR`
+    from PyOSBNR import OSBNR
+
+    osbnr = OSBNR(k=5)  # Create an instance of the OSBNR class with k=5 clusters
+    X_resampled, y_resampled = osbnr.fit_resample(X, y)  # Resample the dataset using OSBNR
+
+With just a few lines of code, you can easily leverage the power of OSBNR to address class imbalance in your dataset and obtain more accurate results in your machine learning models.
 
 ## Installation
 
 To install OSBNR, use pip:
 
-`pip install osbnr`
+    pip install PyOSBNR
 
 ## License
 
@@ -39,7 +43,3 @@ This project is licensed under the GNU License - see the LICENSE file for detail
 - El Hajjami, S., Malki, J., Berrada, M., & Fourka, B. (2020, November). Machine learning for anomaly detection. performance study considering anomaly distribution in an imbalanced dataset. In 2020 5th International Conference on Cloud Computing and Artificial Intelligence: Technologies and Applications (CloudTech) (pp. 1-8). IEEE.
 
 - El Hajjami, S., Malki, J., Bouju, A., & Berrada, M. (2021). Machine Learning Facing Behavioral Noise Problem in an Imbalanced Data Using One Side Behavioral Noise Reduction: Application to a Fraud Detection. International Journal of Computer and Information Engineering, 15(3), 194-205.
-
-# Conclusion
-
-OSBNR is an effective approach to deal with the problem of class imbalance in the presence of behavioral noise. It involves a clustering step and a reduction step to maximize the visibility of the minority class instances and minimize the excessive elimination of data. The approach has been shown to improve the performance of classifiers on imbalanced datasets.
